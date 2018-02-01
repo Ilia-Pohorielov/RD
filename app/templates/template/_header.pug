@@ -1,0 +1,22 @@
+header.header-main
+    .header-top
+        .wrapper
+            .row.valign-wrapper
+                a(href="#").logo.col.l3
+                    img(src="images/logo-header.png", alt="#")
+                .h1.col.l6 ЄДИНИЙ ПОРТАЛ АНАЛІТИКИ
+                    b СУДОВОЇ ПРАКТИКИ
+                a(href="#").btn.btn-blue.col.l3.offset-l2 ВХІД
+    .header-middle
+        .bg-image(style="background-image: url('images/bg-main.jpg')")
+        .search-block
+            .h2.title-page Знайти правову позицію
+            form(action="/",class="js_validate")
+                .form-group.select
+                    select
+                        option Юрисдикції
+                .form-group
+                    input(type="text" name="search", placeholder="Введіть ключові слова")
+                button(type="submit", class="btn btn-search") ПОШУК
+            a(href="#", class="btn-extended") РОЗШИРЕНИЙ ПОШУК
+

@@ -1,0 +1,19 @@
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  ::-moz-placeholder          {@content}
+  :-moz-placeholder           {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+@mixin image-circle($width, $height, $line-height, $border){
+  width: $width; height: $height; border-radius: 50%; text-align: center; line-height: $line-height; flex-shrink: 0; background: $color-text; border: $border;
+}
+
+@mixin animation-delay ($count, $time) {
+  @for $i from 2 through $count {
+    &:nth-child(#{$i}) {
+      transition-delay: #{($i * $time)}s;
+      @content
+    }
+  }
+}

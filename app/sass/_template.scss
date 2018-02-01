@@ -1,0 +1,223 @@
+$color-white: #ffffff;
+$color-black: #000000;
+$color-blue: #1504e7;
+$color-red: #de1922;
+$color-text: #1a1a1a;
+$color-light-red: #ed1c20;
+$color-blue-l: #1403e8;
+$color-border: #ebebeb;
+
+
+$color-gray-bg: #f3f4fa;
+$color-gray-text: #bebebe;
+$color-text-f: #aeb3b7;
+$color-bg-rose: #ebebf7;
+$color-bg-purple: #3949ab;
+$color-gray: #fafbfd;
+$color-blue-bg: #0077b5;
+$color-bg-block: #f6f7fb;
+$color-map-border: #d7d7d7;
+$color-bg-map: #eceff1;
+$color-red: #e21708;
+$color-gray-title: #f2f2f2;
+
+body {
+  background: $color-white; color: $color-text;
+}
+blockquote {
+  display: block; border-left: 2px solid $color-text; padding-left: 30px; font-size: 22px; line-height: 30px; margin: 24px 0;
+}
+a {
+  color: $color-text; transition: all .3s ease;
+  &:hover, &:focus, &:active {
+    color: $color-blue;
+  }
+}
+main {
+  flex: 0 1 auto; flex-basis: 100%;
+}
+footer {
+  flex-shrink: 0;
+}
+sup {
+  color: $color-red;
+}
+.slick-loading .slick-list {
+  background: none;
+}
+.wrapper {
+  max-width: 1560px; padding: 0 15px; margin: 0 auto;
+}
+/* BEGIN TITLE */
+  .h1 {
+    font-size: 24px;
+  }
+/* END TITLE */
+/** BEGIN BTN STYLE **/
+.btn {
+  width: 166px; max-width: 166px; border-radius: 2px; text-align: center; text-transform: uppercase; color: $color-white; background: $color-blue; padding: 16px 0 14px;
+  height: auto; line-height: initial; letter-spacing: normal; font-size: 14px; font-weight: 500; box-shadow: none; vertical-align: baseline;
+  &.btn-white {
+    background: transparent; border: 1px solid $color-white;
+    &:hover, &:focus, &:active {
+      background: rgba($color-white, .2); box-shadow: none; color: $color-white;
+    }
+  }
+  &.btn-blue {
+    max-width: 133px; border: 1px solid $color-blue; background: transparent; color: $color-blue; font-size: 12px; padding: 13px;
+    &:hover, &:focus, &:active {
+      background: $color-blue; color: $color-white;
+    }
+  }
+  &.btn-linkedin {
+    background: transparent; border: 1px solid $color-white; max-width: 266px; width: 266px; position: relative; padding: 17px 25px 17px 80px; color: $color-white;
+    &:before {
+      content: '\E01A'; font-family: "Icons"; position: absolute; top: 50%; left: 25px; transform: translateY(-50%); font-size: 20px;
+    }
+    &:after {
+      content: ''; width: 1px; display: block; height: 62%; background: rgba($color-white, .5); position: absolute; left: 70px; top: 50%; transform: translateY(-50%);
+    }
+    &:hover, &:focus, &:active {
+      background: rgba($color-white, .2); box-shadow: none; color: $color-white;
+    }
+  }
+  &:hover, &:focus, &:active {
+    background: #949494; box-shadow: none; color: $color-text;
+  }
+}
+/** END BTN STYLE **/
+/* BEGIN BREADCRUMBS */
+.breadcrumbs {
+  display: flex; font-size: 12px; margin-bottom: 70px;
+  li {
+    position: relative; color: $color-white;
+    a, span {
+      display: block; color: rgba($color-white, .6); transition: all .3s ease;
+      &:hover, &:focus, &:active {
+        color: $color-white;
+      }
+    }
+    span {
+      color: $color-white; transition: all .3s ease;
+    }
+    &:not(:last-child) {
+      padding-right: 8px; margin-right: 4px;
+      &:after {
+        content: '-'; display: block; position: absolute; right: 0; top: 50%; transform: translateY(-50%); color: rgba($color-white, .6);
+      }
+    }
+  }
+  @media (max-width: 880px) {
+    margin-bottom: 15px;
+  }
+}
+/*END BREADCRUMBS */
+.header-inner {
+  .header-image {
+    min-height: 647px; padding: 0 0 34%;
+    @media (max-width: 880px) {
+      min-height: 200px;
+    }
+  }
+}
+.header-contact {
+  .header-image {
+    padding: 0 0 31%;
+  }
+  .title {
+    margin-bottom: 40px;
+  }
+  .breadcrumbs {
+    margin-bottom: 40px;
+  }
+  @media (max-width: 1440px) {
+    .title-annotation {
+      font-size: 30px; line-height: 34px;
+    }
+  }
+  @media (max-width: 1335px) {
+    .title {
+      margin-bottom: 20px;
+    }
+    .breadcrumbs {
+      margin-bottom: 20px;
+    }
+  }
+  @media (max-width: 977px) {
+    .block-annotation {
+      display: none;
+    }
+  }
+}
+.feedback-homepage {
+  background: $color-bg-block; padding: 55px 0;
+  .wrapper {
+    max-width: 1200px;
+  }
+  @media (max-width: 767px) {
+    padding: 25px 0;
+  }
+}
+.title-footer {
+  font-size: 20px; line-height: 30px; font-weight: normal; text-align: center; color: $color-white; max-width: 1120px; margin: 0 auto;
+  span {
+    display: block; font-size: 35px; font-weight: 500; line-height: 42px; margin-bottom: 22px;
+  }
+  .text {
+    margin-bottom: 26px;
+  }
+  .btn {
+    max-width: 176px; position: relative;
+    &:before {
+      content: ''; display: block; position: absolute; top: 0; left: 0; right: 0; height: 100%; background: rgba($color-white, .2); opacity: 0; transition: all .3s ease;
+    }
+    &:hover, &:focus, &:active {
+      background: $color-blue; color: $color-white;
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    margin: 0 auto 15px auto; font-size: 14px; line-height: 16px;
+    span {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    .text {
+      margin-bottom: 18px;
+    }
+  }
+}
+.block-offer.feedback-homepage {
+  background: $color-blue-bg;
+}
+@keyframes scale {
+  80% {transform:scale(3);opacity:0;}
+  100% {opacity: 0;transform:scale(1)}
+}
+[opacity] {
+  opacity: 0.5;
+}
+[opacity] {
+  transform-origin:center center;
+  animation: scale 2s linear infinite
+}
+.modal {
+  max-width: 600px; overflow: initial;
+  .modal-title {
+    font-size: 25px; text-align: center; font-weight: 500; padding: 20px 0; margin-bottom: 20px;
+  }
+  .modal-short {
+    font-size: 18px; text-align: center; font-weight: 300; padding: 20px 0;
+  }
+  .modal-close {
+    position: absolute; top: -20px; right: -20px; width: 30px; height: 30px;
+    &:before, &:after {
+      content: ''; display: block; width: 2px; height: 100%; position: absolute; right: 0; background: $color-white; transform: rotate(45deg); transform-origin: center;
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
