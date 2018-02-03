@@ -1,0 +1,103 @@
+footer {
+  background: $color-blue; border-bottom: 21px solid $color-border-red; padding-top: 30px;
+  .top-footer {
+    margin-bottom: 17px;
+    .menu-footer {
+      color: $color-white; font-size: 14px; text-transform: uppercase; padding-top: 20px;
+      .title-footer__menu {
+        font-weight: bold; margin-bottom: 10px;
+      }
+      ul {
+        li {
+          a {
+            color: $color-white; transition: all .3s ease;
+            &:hover, &:focus, &:active {
+              color: $color-light-red;
+            }
+          }
+          &:not(:last-child){
+            margin-bottom: 9px;
+          }
+        }
+      }
+    }
+    .decoration-bg {
+      background: url("../images/bg-footer.png")no-repeat 0 0; min-height: 175px;;
+    }
+  }
+  .title-footer {
+    font-size: 20px; line-height: 25px; letter-spacing: 3px;
+  }
+  .subscribe-form {
+    .title-subscribe {
+      font-size: 18px; font-weight: bold; line-height: 20px; margin-bottom: 10px; padding-left: 20px; color: $color-white;
+    }
+    form {
+      position: relative;
+      .form-group {
+        padding-right: 25px;
+        input {
+          border-bottom: none; height: 47px; padding-left: 30px; padding-right: 15px; margin-bottom: 0; background: $color-white;
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+      .btn-subscribe {
+        position: absolute; right: 0; top: 0;
+      }
+    }
+  }
+  .copyright {
+    font-size: 15px; line-height: 35px; color: $color-white; text-align: center;
+  }
+  .social-links {
+    position: absolute; top: 50%; right: 0; transform: translateY(-50%);
+    ul {
+      display: flex;
+      li {
+        a {
+          display: block;
+          &:hover, &:focus, &:active {
+            &:before {
+              color: $color-light-red;
+            }
+          }
+        }
+        a:before {
+          content: ''; font-family: "Icons"; color: $color-white; font-size: 22px; transition: all .3s ease;
+        }
+        &.facebook a:before {
+          content: '\E005';
+        }
+        &.linkedin a:before {
+          content: '\E006';
+        }
+        &.twitter a:before {
+          content: '\E008';
+        }
+        &.pinterest a:before {
+          content: '\E007';
+        }
+        &:not(:last-child) {
+          margin-right: 50px;
+        }
+        &:last-child {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    text-align: center; margin-bottom: 21px; position: relative;
+  }
+  .bottom-footer {
+    margin-bottom: 23px; padding-bottom: 25px; border-bottom: 1px solid rgba($color-white, .2);
+    .footer-logo a {
+      display: block;
+    }
+    .footer-logo, .title-footer {
+      margin-top: 32px;
+    }
+  }
+}

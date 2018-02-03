@@ -6,6 +6,13 @@ $color-text: #1a1a1a;
 $color-light-red: #ed1c20;
 $color-blue-l: #1403e8;
 $color-border: #ebebeb;
+$color-gray: #8d8d8d;
+$color-border-red: #eb1f27;
+$color-title: #262525;
+$color-border-blue: #3e32d4;
+$color-icon: #e0e1e3;
+$color-gray-l: #dcdcdc;
+$color-gray-text: #838383;
 
 
 $color-gray-bg: #f3f4fa;
@@ -13,7 +20,6 @@ $color-gray-text: #bebebe;
 $color-text-f: #aeb3b7;
 $color-bg-rose: #ebebf7;
 $color-bg-purple: #3949ab;
-$color-gray: #fafbfd;
 $color-blue-bg: #0077b5;
 $color-bg-block: #f6f7fb;
 $color-map-border: #d7d7d7;
@@ -25,7 +31,21 @@ body {
   background: $color-white; color: $color-text;
 }
 blockquote {
-  display: block; border-left: 2px solid $color-text; padding-left: 30px; font-size: 22px; line-height: 30px; margin: 24px 0;
+  display: block; font-size: 28px; line-height: 35px; padding: 30px 0; position: relative; max-width: 510px; border: none;
+  .text {
+    padding-left: 71px; position: relative;
+    &:before {
+      content: '\E004'; font-family: "Icons"; font-size: 24px; position: absolute; left: 30px; top: -8px; color: $color-blue-l;
+    }
+  }
+  &:before {
+    content: ''; display: block; height: 100%; width: 50%; border-top: 5px solid $color-blue-l; border-left: 5px solid $color-blue-l; border-bottom: 5px solid $color-blue-l;
+    position: absolute; left: 0; top: 0;
+  }
+  &:after {
+    content: ''; display: block; height: 100%; width: 50%; border-top: 5px solid $color-light-red; border-bottom: 5px solid $color-light-red; border-right: 5px solid $color-light-red;
+    position: absolute; right: 0; top: 0; border-top-right-radius: 60px; border-bottom-right-radius: 60px;
+  }
 }
 a {
   color: $color-text; transition: all .3s ease;
@@ -42,47 +62,120 @@ footer {
 sup {
   color: $color-red;
 }
+.row {
+  margin: 0 -15px;
+}
+.red-text {
+  color: $color-light-red!important;
+}
+.blue-text {
+  color: $color-blue-l!important;
+}
 .slick-loading .slick-list {
   background: none;
+}
+@include placeholder() {
+  font-size: 14px; color: #7f7f7f;
 }
 .wrapper {
   max-width: 1560px; padding: 0 15px; margin: 0 auto;
 }
+.wrap {
+  max-width: 1315px; padding: 0 15px; margin: 0 auto;
+}
+.footer-wrap {
+  max-width: 1360px; padding: 0 15px; margin: 0 auto;
+}
 /* BEGIN TITLE */
-  .h1 {
-    font-size: 24px;
+  .title-header {
+    font-size: 24px; letter-spacing: 3px;
+  }
+  .title-page {
+    font-weight: bold; font-size: 44px; color: $color-white; text-align: center; text-transform: uppercase; margin-bottom: 40px; letter-spacing: 2.2px; line-height: 53px;
+  }
+  .title-about {
+    font-weight: bold; font-size: 44px; max-width: 650px; color: $color-text; line-height: 62px; padding-bottom: 30px;
+    &:before {
+      content: ''; position: absolute; bottom: 0;
+    }
+  }
+  .decor-element {
+    width: 18px; height: 18px; background: $color-blue; position: absolute; top: -9px; left: 0;
+    &:after {
+      content: ''; display: block; width: 18px; height: 18px; border-radius: 50%; background: $color-light-red; position: absolute; right: -25px;
+    }
+  }
+  .title-block {
+    color: $color-title; font-weight: bold; font-size: 35px; line-height: 40px; position: relative; text-align: center; padding: 0 30px; display: inline-block;
+    margin-bottom: 60px;
+    &:after, &:before {
+      content: ''; position: absolute; width: 11px; height: 11px; top: 50%; transform: translateY(-50%);
+    }
+    &:before {
+      left: 0; background: $color-blue;
+    }
+    &:after {
+      right: 0; background: $color-light-red; border-radius: 50%;
+    }
   }
 /* END TITLE */
 /** BEGIN BTN STYLE **/
 .btn {
-  width: 166px; max-width: 166px; border-radius: 2px; text-align: center; text-transform: uppercase; color: $color-white; background: $color-blue; padding: 16px 0 14px;
-  height: auto; line-height: initial; letter-spacing: normal; font-size: 14px; font-weight: 500; box-shadow: none; vertical-align: baseline;
-  &.btn-white {
-    background: transparent; border: 1px solid $color-white;
-    &:hover, &:focus, &:active {
-      background: rgba($color-white, .2); box-shadow: none; color: $color-white;
-    }
-  }
-  &.btn-blue {
-    max-width: 133px; border: 1px solid $color-blue; background: transparent; color: $color-blue; font-size: 12px; padding: 13px;
-    &:hover, &:focus, &:active {
-      background: $color-blue; color: $color-white;
-    }
-  }
-  &.btn-linkedin {
-    background: transparent; border: 1px solid $color-white; max-width: 266px; width: 266px; position: relative; padding: 17px 25px 17px 80px; color: $color-white;
-    &:before {
-      content: '\E01A'; font-family: "Icons"; position: absolute; top: 50%; left: 25px; transform: translateY(-50%); font-size: 20px;
-    }
-    &:after {
-      content: ''; width: 1px; display: block; height: 62%; background: rgba($color-white, .5); position: absolute; left: 70px; top: 50%; transform: translateY(-50%);
-    }
-    &:hover, &:focus, &:active {
-      background: rgba($color-white, .2); box-shadow: none; color: $color-white;
-    }
+  border: 3px solid $color-blue; color: $color-blue;  text-transform: uppercase; font-weight: bold; padding: 4px 24px 4px 10px; font-size: 18px; height: auto; line-height: normal;
+  background: transparent; box-shadow: none;
+}
+.btn-contact, .btn-read-more {
+  position: relative; transition: all .3s ease;
+  &:after {
+    content: '\E001'; width: 38px; height: 38px; border-radius: 50%; background: $color-light-red; font-family: "Icons"; line-height: 38px; text-align: center; font-size: 16px;
+    position: absolute; right: -15%; top: 50%; transform: translateY(-50%) rotate(-90deg); color: $color-white; transition: all .3s ease;
   }
   &:hover, &:focus, &:active {
-    background: #949494; box-shadow: none; color: $color-text;
+    border-color: $color-light-red; color: $color-light-red; background: transparent; box-shadow: none;
+    &:after {
+      background: $color-blue;
+    }
+  }
+}
+.btn-contact {
+  background: $color-blue; color: $color-white; box-shadow: none;
+}
+.btn-blue {
+  border-radius: 16px; background: transparent; padding: 6px 30px; border: 3px solid $color-blue; color: $color-blue; height: auto; line-height: normal; box-shadow: none;
+  font-size: 15px; font-weight: bold; display: inline-block;
+  &:hover, &:focus, &:active {
+    background: $color-blue; color: $color-white; box-shadow: none;
+  }
+}
+.btn-search {
+  background: $color-red; color: $color-white; font-size: 15px; font-weight: bold; padding: 15px 58px 15px 27px; height: auto; line-height: normal; box-shadow: none;
+  border-radius: 25px; position: relative; border: 1px solid transparent;
+  &:after {
+    content: '\E002'; display: block; font-family: "Icons"; color: $color-white; font-size: 20px; position: absolute; right: 27px; top: 50%; transform: translateY(-50%);
+  }
+  &:hover, &:focus {
+    border-color: $color-red; background: transparent; color: $color-red; box-shadow: none;
+    &:after {
+      color: $color-red;
+    }
+  }
+}
+.btn-extended {
+  border: 2px solid $color-white; padding: 7px 30px; color: $color-white; font-size: 15px; text-transform: uppercase;
+  &:hover, &:focus, &:active {
+    border-color: $color-red; background: $color-white; color: $color-red;
+  }
+}
+.btn-anchor {
+  width: 51px; height: 51px; border-radius: 50%; border: 3px solid $color-white; position: relative;
+  &:after {
+    content: '\E003'; display: inline-block; font-family: "Icons"; color: $color-white; font-size: 23px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  }
+}
+.btn-subscribe {
+  background: $color-border-red; border-radius: 50%; border: none; width: 50px; height: 50px; position: relative;
+  &:before {
+    content: '\E003'; display: block; font-family: "Icons"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-90deg); font-size: 15px; color: $color-white;
   }
 }
 /** END BTN STYLE **/
@@ -192,32 +285,29 @@ sup {
 .block-offer.feedback-homepage {
   background: $color-blue-bg;
 }
-@keyframes scale {
-  80% {transform:scale(3);opacity:0;}
-  100% {opacity: 0;transform:scale(1)}
+/* STYLE FORM */
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+   margin-bottom: 10px; height: 47px; border: 1px solid #d9d5d5; padding: 0 15px;
+ }
+textarea {
+  border: 1px solid #d9d5d5; min-height: 150px; padding: 15px; margin-bottom: 20px;
 }
-[opacity] {
-  opacity: 0.5;
-}
-[opacity] {
-  transform-origin:center center;
-  animation: scale 2s linear infinite
-}
-.modal {
-  max-width: 600px; overflow: initial;
-  .modal-title {
-    font-size: 25px; text-align: center; font-weight: 500; padding: 20px 0; margin-bottom: 20px;
-  }
-  .modal-short {
-    font-size: 18px; text-align: center; font-weight: 300; padding: 20px 0;
-  }
-  .modal-close {
-    position: absolute; top: -20px; right: -20px; width: 30px; height: 30px;
-    &:before, &:after {
-      content: ''; display: block; width: 2px; height: 100%; position: absolute; right: 0; background: $color-white; transform: rotate(45deg); transform-origin: center;
-    }
-    &:after {
-      transform: rotate(-45deg);
-    }
-  }
-}
+/* SLIDER STYLE */
+ .slick-arrow {
+   width: 30px; height: 57px; opacity: 1; top: 57%;
+   &:before {
+     font-size: 70px; font-family: "Icons"; color: #3022e3; opacity: 1;
+   }
+   &.slick-next {
+     right: -80px;
+     &:before {
+       content: '\E00E';
+     }
+   }
+   &.slick-prev {
+     transform: rotate(-180deg); left: -62px; transform-origin: 0 37%;
+     &:before {
+       content: '\E00E';
+     }
+   }
+ }

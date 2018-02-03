@@ -1,0 +1,78 @@
+@font-face {
+	font-family: "Icons";
+	src: url('fonts/Icons.eot');
+	src: url('fonts/Icons.eot?#iefix') format('eot'),
+		url('fonts/Icons.woff2') format('woff2'),
+		url('fonts/Icons.woff') format('woff'),
+		url('fonts/Icons.ttf') format('truetype'),
+		url('fonts/Icons.svg#Icons') format('svg');
+}
+
+.icon:before {
+	font-family: "Icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.icon-1-down-arrow:before {
+	content: "\E001";
+}
+
+.icon-2-magnifier (1):before {
+	content: "\E002";
+}
+
+.icon-3-download-arrow:before {
+	content: "\E003";
+}
+
+.icon-4-quotation-right-mark:before {
+	content: "\E004";
+}
+
+.icon-5-facebook-logo:before {
+	content: "\E005";
+}
+
+.icon-6-linkedin-logo:before {
+	content: "\E006";
+}
+
+.icon-7-pinterest-logo:before {
+	content: "\E007";
+}
+
+.icon-8-twitter-logo-silhouette:before {
+	content: "\E008";
+}
+
+.icon-9-envelope:before {
+	content: "\E009";
+}
+
+.icon-9-user:before {
+	content: "\E00A";
+}
+
+.icon-90-linkedin:before {
+	content: "\E00B";
+}
+
+.icon-91-clock:before {
+	content: "\E00C";
+}
+
+.icon-92-eye:before {
+	content: "\E00D";
+}
+
+.icon-93-right-arrow:before {
+	content: "\E00E";
+}
