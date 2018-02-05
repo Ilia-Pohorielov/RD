@@ -14,7 +14,9 @@ var gulp = require('gulp'),
     rename  = require('gulp-rename'),
     pug = require('gulp-pug'),
     pugInheritance = require('gulp-pug-inheritance'),
-    runTimestamp  = Math . round ( Date . now ( ) / 1000 ) ;
+    runTimestamp  = Math . round ( Date . now ( ) / 1000 ),
+    consolidate = require('gulp-consolidate'),
+    async = require('async');
 
 var path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
@@ -46,15 +48,21 @@ gulp.task('iconfont', function(){
             fontName: fontName,
             targetPath: '../../sass/_icons.scss',
             fontPath: 'fonts/',
-            timestamp :  runTimestamp
+            timestamp: runTimestamp,
+            appendCodepoints: true
         }))
         .pipe(iconfont({
+            normalize: true,
             fontName: fontName,
             formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
-            normalize: true,
             centerHorizontally: true,
-            fontHeight: 1001
+            fontHeight: 1001,
+            appendCodepoints: true
         }))
+        .on('codepoints', function(codepoints, options) {
+            // CSS templating, e.g.
+            console.log(codepoints, options);
+        })
         .pipe(gulp.dest('app/css/fonts/'));
 });
 

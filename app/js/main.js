@@ -45,4 +45,33 @@ $(document).ready(function() {
             }
         ]
     });
+    $('.js-slider-legal').slick({
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1
+    });
+    $('.js-open-comment').on('click', function () {
+       $(this).text('').toggleClass('open');
+       $(this).parents('.comment').find('.inner-comments').slideToggle();
+    });
+    function blueHideTitle(el, size) {
+        var itemLenght = $(el);
+        var textItem = itemLenght.text();
+        var lengItem = textItem.length;
+        var maxL = size;
+        if (textItem.length >= maxL) {
+            var text = textItem.slice(0, maxL);
+            textItem = text + '..';
+            $(itemLenght).text(textItem);
+        }
+    };
+    var hide = $('.legal-position').find('.js-hide');
+    hide.each(function (i, e) {
+        blueHideTitle($(e), 155);
+    });
+    var yearBlock = document.querySelector('.yearN'),
+        yearNow = new Date().getFullYear().toString();
+    if (yearNow.length) {
+        yearBlock.innerText = yearNow
+    }
 });

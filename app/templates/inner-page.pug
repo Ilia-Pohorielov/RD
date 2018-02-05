@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+  html
+   include template/_head
+   body
+     include template/_header-inner
+     main
+      .wrapper
+       ul.breadcrumbs
+        li
+         a(href="#") Главная
+        li
+         a(href="#") Каталог статей
+        li
+         span Заходи щодо забезпечення збереження електронних доказів
+       .title Заходи щодо забезпечення збереження електронних доказів
+       .tabs-page
+         ul.tabs
+           li.tab
+            a(href="#tab1").active правова позиція
+           li.tab
+            a(href="#tab2") Інформаційні додатки
+           li.tab
+            a(href="#tab3") судовe рішення
+           li.tab
+            a(href="#tab4") додаткові матеріали
+           li.tab
+            a(href="#tab5") картка додаткової позиції
+       .tabs-inner
+           #tab1.position
+               .title-inner Правова позиція
+               p.
+                Успіх юриста в цивільному (арбітражному) процесі залежить від того, наскільки вірно сформована позиція по справі. У спілкуванні юристами часто використовується поняття "правова позиція", або "позиція по справі". Воно стало загальновідомим і зрозумілим для практиків, але в той же час нс отримало необхідної законодавчої регламентації.
+               p.
+                У юридичній науці даються такі трактування даного поняття.
+               p.
+                Так, А. В. Гриньова вважає, що "поняття" позиція "має філософські підстави і означає побудову чогосьнебудь, співвідношення предметів і речей в природі. У розумовій діяльності позиція являє собою систему суджень з приводу ставлення до чого-небудь або до кого - або. ... Під правовою позицією взагалі слід розуміти оцінку правової реальності, систему правових аргументів, що лежать в основі законотворчої, судової та іншої правозастосовчої діяльності. У будь-якому випадку це логіко мовна конструкція, що виражає відношення суб'єкта до правових явищ і процесів "
+               p.
+                С. С. Колобашкін вважає, що "позиція - система переконань суб'єкта про якості, властивості, інші характеристики досліджуваного явища, процесу, що виступають як об'єкта", і виділяє наступні загальні ознаки позиції: системність; суб'єктивна обумовленість; переконання як форма опосередкування інформації; визначеність змісту позиції, оскільки вона завжди конкретна; завершеність і внутрішня несуперечність ".
+      .wrap-info.border
+          .resource-info
+               ul
+                   li
+                    a(href="#").append додати у бібліотеку
+                   li
+                    a(href="#").download закачати статтю
+                   li
+                    a(href="#").share поділитися
+                   li
+                    a(href="#").print Друкувати
+               .info
+                   .top-info
+                       .left-block
+                           .title-info Юрисдикция:
+                           a(href="#").jurisdiction-name Конституційна юрисдикція
+                       .right-block
+                           .rating
+                               span
+                           .date-publish 12.09.2017 в 10:45
+                   .tags
+                       .title-info Ключові слова:
+                       ul
+                           li
+                            a(href="#") Сохранность
+                           li
+                            a(href="#") обеспечение
+                           li
+                            a(href="#") Доказательства
+                           li
+                            a(href="#") Юрисдикция
+      .wrap-info
+         .block-comments
+            .title-inner Коментарі
+            .comments-bar
+                .count-comments 12 коментарів
+                .sort-comment
+                    form(action="/")
+                        .form-group.select
+                            select
+                                option Сортировать по времени
+                                option Сортировать по дате
+            .comment
+                .name John Doe
+                .comment-text.
+                    Успіх юриста в цивільному (арбітражному) процесі залежить від того, наскільки вірно сформована позиція по справі. У спілкуванні юристами часто використовується поняття "правова позиція", або "позиція по справі". Воно стало загальновідомим і зрозумілим для практиків, але в той же час нс отримало необхідної законодавчої регламентації.
+                .status-comment
+                    .date-publish 10.02.2017   в 10:45
+                    .comment-rating
+                        .like 122
+                        .dislike 25
+                .comment-button
+                    a(href="#").repeat-comment Ответить на комментарий
+                div.open-comment.js-open-comment Раскрыть ветвь
+                    span.count  (126)
+                .inner-comments
+                    .comment
+                        .name David Davi
+                            span.answer-name Ответил John Doe
+                        .comment-text.
+                            Успіх юриста в цивільному (арбітражному) процесі залежить від того, наскільки вірно сформована позиція по справі. У спілкуванні юристами часто використовується поняття "правова позиція", або "позиція по справі". Воно стало загальновідомим і зрозумілим для практиків, але в той же час нс отримало необхідної законодавчої регламентації.
+                        .status-comment
+                            .date-publish 10.02.2017   в 10:45
+                            .comment-rating
+                                .like 25
+                                .dislike 1
+                        a(href="#").repeat-comment Ответить на комментарий
+            .comment
+             .name Maria
+             .comment-text.
+                 Успіх юриста в цивільному (арбітражному) процесі залежить від того, наскільки вірно сформована позиція по справі. У спілкуванні юристами часто використовується поняття "правова позиція", або "позиція по справі". Воно стало загальновідомим і зрозумілим для практиків, але в той же час нс отримало необхідної законодавчої регламентації.
+             .status-comment
+                 .date-publish 10.02.2017   в 10:45
+                 .comment-rating
+                     .like 122
+                     .dislike 25
+             .comment-button
+                 a(href="#").repeat-comment Ответить на комментарий
+             div.open-comment.js-open-comment Раскрыть ветвь
+                 span.count  (126)
+             .inner-comments
+                 .comment
+                     .name David Davi
+                         span.answer-name Ответил Maria
+                     .comment-text.
+                         Успіх юриста в цивільному (арбітражному) процесі залежить від того, наскільки вірно сформована позиція по справі. У спілкуванні юристами часто використовується поняття "правова позиція", або "позиція по справі". Воно стало загальновідомим і зрозумілим для практиків, але в той же час нс отримало необхідної законодавчої регламентації.
+                     .status-comment
+                         .date-publish 10.02.2017   в 10:45
+                         .comment-rating
+                             .like 25
+                             .dislike 1
+                     a(href="#").repeat-comment Ответить на комментарий
+         .form-comment
+             form(action="/", class="js_validate")
+                 .form-group
+                     label Написать комментарий
+                     textarea
+                 button(type="submit").btn-comment Отправить
+      hr
+      .wrapper
+          .title-legal Останні переглянуті правові позиції
+          .block-legal-position.js-slider-legal
+              .legal-position
+                  a(href="#").more
+                  .title-position Заходи щодо забезпечення збереження електронних доказів
+                  .description.js-hide.
+                      Кожна Сторона вживає таких законодавчих або інших заходів для збереження електронних доказів, в тому числі за допомогою забезпечення оперативної збереження dasdasdasdasdasd
+                  a(href="#").jurisdiction-name Конституційна юрисдикція
+                  .status-position
+                      .rating
+                          span
+                      ul
+                          li.views 264
+                          li.messages 42
+                          li.downloads 25
+                  a(href="#").btn-legal перейти до статті
+              .legal-position
+                  a(href="#").more
+                  .title-position Заходи щодо забезпечення збереження електронних доказів
+                  .description.js-hide.
+                      Кожна Сторона вживає таких законодавчих або інших заходів для збереження електронних доказів, в тому числі за допомогою забезпечення оперативної збереження dasdasdasdasdasd
+                  a(href="#").jurisdiction-name Конституційна юрисдикція
+                  .status-position
+                      .rating
+                          span
+                      ul
+                          li.views 264
+                          li.messages 42
+                          li.downloads 25
+                  a(href="#").btn-legal перейти до статті
+              .legal-position
+                  a(href="#").more
+                  .title-position Заходи щодо забезпечення збереження електронних доказів
+                  .description.js-hide.
+                      Кожна Сторона вживає таких законодавчих або інших заходів для збереження електронних доказів, в тому числі за допомогою забезпечення оперативної збереження dasdasdasdasdasd
+                  a(href="#").jurisdiction-name Конституційна юрисдикція
+                  .status-position
+                      .rating
+                          span
+                      ul
+                          li.views 264
+                          li.messages 42
+                          li.downloads 25
+                  a(href="#").btn-legal перейти до статті
+          .title-legal Рекомендовані правові позиції
+          .block-legal-position.js-slider-legal
+              .legal-position
+                  a(href="#").more
+                  .title-position Заходи щодо забезпечення збереження електронних доказів
+                  .description.js-hide.
+                      Кожна Сторона вживає таких законодавчих або інших заходів для збереження електронних доказів, в тому числі за допомогою забезпечення оперативної збереження dasdasdasdasdasd
+                  a(href="#").jurisdiction-name Конституційна юрисдикція
+                  .status-position
+                      .rating
+                          span
+                      ul
+                          li.views 264
+                          li.messages 42
+                          li.downloads 25
+                  a(href="#").btn-legal перейти до статті
+              .legal-position
+                  a(href="#").more
+                  .title-position Заходи щодо забезпечення збереження електронних доказів
+                  .description.js-hide.
+                      Кожна Сторона вживає таких законодавчих або інших заходів для збереження електронних доказів, в тому числі за допомогою забезпечення оперативної збереження dasdasdasdasdasd
+                  a(href="#").jurisdiction-name Конституційна юрисдикція
+                  .status-position
+                      .rating
+                          span
+                      ul
+                          li.views 264
+                          li.messages 42
+                          li.downloads 25
+                  a(href="#").btn-legal перейти до статті
+              .legal-position
+                  a(href="#").more
+                  .title-position Заходи щодо забезпечення збереження електронних доказів
+                  .description.js-hide.
+                      Кожна Сторона вживає таких законодавчих або інших заходів для збереження електронних доказів, в тому числі за допомогою забезпечення оперативної збереження dasdasdasdasdasd
+                  a(href="#").jurisdiction-name Конституційна юрисдикція
+                  .status-position
+                      .rating
+                          span
+                      ul
+                          li.views 264
+                          li.messages 42
+                          li.downloads 25
+                  a(href="#").btn-legal перейти до статті
+              .legal-position
+                  a(href="#").more
+                  .title-position Заходи щодо забезпечення збереження електронних доказів
+                  .description.js-hide.
+                      Кожна Сторона вживає таких законодавчих або інших заходів для збереження електронних доказів, в тому числі за допомогою забезпечення оперативної збереження dasdasdasdasdasd
+                  a(href="#").jurisdiction-name Конституційна юрисдикція
+                  .status-position
+                      .rating
+                          span
+                      ul
+                          li.views 264
+                          li.messages 42
+                          li.downloads 25
+                  a(href="#").btn-legal перейти до статті
+
+
+     include template/_inner-footer
+     script(type='text/javascript', src='js/all-plugins.js')
+     script(type='text/javascript', src='js/main.js')

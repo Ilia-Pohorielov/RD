@@ -8,9 +8,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "async": "^2.6.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-consolidate": "^0.2.0",
     "gulp-iconfont": "^9.0.2",
     "gulp-imagemin": "^3.4.0",
     "gulp-minify-css": "^1.2.4",
